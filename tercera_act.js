@@ -1,3 +1,4 @@
+console.log("TERCER ACTIVIDAD");
 function frequency( string ) {
     var array_lengths = {}; // objeto
 

@@ -1,4 +1,6 @@
 
+console.log("PRIMER ACTIVIDAD");
+
  function deepEqual(a, b) {
      
    if (a===b)

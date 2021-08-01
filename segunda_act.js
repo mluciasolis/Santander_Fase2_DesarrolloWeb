@@ -1,4 +1,4 @@
- 
+console.log("SEGUNDA ACTIVIDAD");
 function chunk(array, size) {
     const GuardArreglos = []; //Para guardar los arreglos separados
     console.log("Arreglo original:", array); //Para mostrar el arreglo original
