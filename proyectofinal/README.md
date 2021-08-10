@@ -19,25 +19,25 @@ El proyecto consiste en el desarrollo de una aplicación cuya función es un bus
 
 ## Postwork S8
 
-### Mockups :pencil2:
+### Mockups
 
-A continuación se presenta la propuesta de UI a través de mockups realizados con la aplicación [miro](https://miro.com/app/dashboard/), esto con el fin de obtener una idea clara de todos los componentes que serán contemplados para el desarrollo del proecto.
+A continuación se presenta la propuesta de UI a través de mockups realizados con la aplicación [miro](https://miro.com/app/dashboard/), esto con el fin de obtener una idea clara de todos los componentes que serán contemplados para el desarrollo del proyecto.
 
 **Mockup 1:** Pantalla de inicio 
-![**Pantalla de inicio**](./mockups/pantallaInicio.jpeg)
-Se muestra ...
+![Pantalla de inicio](./mockups/pantallaInicio.jpg)
+
 
 **Mockup 2:** Pantalla de resultados de una búsqueda
-![**Pantalla de resultados de una búsqueda**](./mockups/pantallaBusqueda.jpeg)
-Se muestra ...
+![Pantalla de resultados de una búsqueda](./mockups/pantallaBusqueda.jpg)
+
 
 **Mockup 3:** Pantalla de Recetas Aleatorias 
-![**Pantalla de Recetas Aleatorias**](./mockups/pantallaAleatorio.jpeg)
-Se muestra ...
+![Pantalla de Recetas Aleatorias](./mockups/pantallaAleatorio.jpg)
+
 
 **Mockup 4:** Pantalla de Receta Específica 
-![**Pantalla de Receta Específica **](./mockups/pantallaReceta.jpeg)
-Se muestra ...
+![Pantalla de Receta Específica](./mockups/pantallaReceta.jpg)
+
 
 
 ### Configuración del proyecto
