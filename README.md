@@ -104,6 +104,6 @@ function frequency(string) {
 Como resultado se obtiene un objeto donde sus propiedades son los caracteres ordenados de manera ascendente, y los valores son la frecuencia de los mismos.
 
 ## Postwork S8
-Se desarrolló la primer parte del proyecto final, la cual consistió en la creación de mockups y en la configuración del proyecto haciendo uso de Webpack, Babel y webpack Dev Server.
-Para obtener información más detallada [ingrese aquí](./proyectofinal/proyectoFinal.md).
+En este postwork se desarrolló la primer parte del proyecto final, la cual consistió en la creación de mockups y en la configuración del proyecto haciendo uso de Webpack, Babel y webpack Dev Server.
+Para obtener información más detallada [ingrese aquí](./proyectofinal/README.md).
 

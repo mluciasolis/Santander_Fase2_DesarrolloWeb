@@ -14,21 +14,37 @@ El proyecto consiste en el desarrollo de una aplicación cuya función es un bus
 
 - Postwork S8
 	- [Mockups](#mockups)
-	- [Configuración del proyecto](#configuracion-del-proyecto)
-- Postwork S12
+	- [Configuración del proyecto](#configuración-del-proyecto)
+
 
 ## Postwork S8
 
-### Mockups
+### Mockups :pencil2:
+
+A continuación se presenta la propuesta de UI a través de mockups realizados con la aplicación [miro](https://miro.com/app/dashboard/), esto con el fin de obtener una idea clara de todos los componentes que serán contemplados para el desarrollo del proecto.
+
 **Mockup 1:** Pantalla de inicio 
 ![**Pantalla de inicio**](./mockups/pantallaInicio.jpeg)
 Se muestra ...
 
+**Mockup 2:** Pantalla de resultados de una búsqueda
+![**Pantalla de resultados de una búsqueda**](./mockups/pantallaBusqueda.jpeg)
+Se muestra ...
+
+**Mockup 3:** Pantalla de Recetas Aleatorias 
+![**Pantalla de Recetas Aleatorias**](./mockups/pantallaAleatorio.jpeg)
+Se muestra ...
+
+**Mockup 4:** Pantalla de Receta Específica 
+![**Pantalla de Receta Específica **](./mockups/pantallaReceta.jpeg)
+Se muestra ...
+
+
 ### Configuración del proyecto
 Para la configuración del proyecto se dividió en tres tareas principales:
 1. Instalar y configurar **Webpack, Babel y Webpack Dev Server**.
-2. Instalar las **librerías** que se vayan a utilizar (Bootstrap, Materialize, Foundation, etc.).
-3. Configurar los **loaders** necesarios para los estilos, se puede utilizar CSS o SASS.
+2. Configurar los **loaders** necesarios para los estilos, se puede utilizar CSS o SASS.
+3. Instalar las **librerías** que se vayan a utilizar (Bootstrap, Materialize, Foundation, etc.).
 
 Para la instalación y configuración de Webpack, Babel y Webpack Dev Server fue necesario instalar las dependencias de cada una de estas herramientas, las cuales fueron:
   - ```webpack, webpack-cli y html-webpack-plugin```,  dependencias de Webpack.
@@ -74,4 +90,26 @@ Se creó un nuevo archivo llamado ```babel.config.json```, en donde configuramos
 }
 ```
 
-Como segundo punto, se hizo la instalación de librerías que van a ser utilizadas en el desarrollo del proyecto, en este caso se hace uso de *Bootstrap*.
+Como segundo punto,se instalaron y configuraron los loaders necesarios para poder interpretar los archivos css del proyecto.
+Los loaders requeridos fueron ```style-loader``` y ```css-loader```.
+
+Una vez instalados, se agregó al archivo ```webpack.config.js``` la configuración corrspondiente:
+
+```javascript
+module: {
+    rules: [
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+    ]
+  
+```
+
+Por último, se hizo la instalación de librerías que van a ser utilizadas en el desarrollo del proyecto, en este caso se hace uso de *Bootstrap*.
+
+Las dependencias instaladas fueron ```bootstrap``` y  ```@popperjs/core```.
+
+Como parte de la configuración de Bootstrap se incluyó en el archivo index.js los import correspondientes: 
+
+```javascript
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+```
