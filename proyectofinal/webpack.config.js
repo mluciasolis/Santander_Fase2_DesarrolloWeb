@@ -1,23 +1,24 @@
-//webpack.config.js
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-    module: {
-      rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          use: [
-            "style-loader",
-            "css-loader",
-            {
-              loader: "sass-loader",
-              options: {
-                implementation: require("sass"),
-                sassOptions: {
-                  fiber: require("fibers"),
-                },
-              },
-            },
-          ],
-        },
-      ],
-    },
-  };
+  entry: './src/js/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.html'
+    })
+  ],
+  module: {
+    rules: [
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+    ]
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist')
+  }
+}
