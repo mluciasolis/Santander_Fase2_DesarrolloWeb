@@ -1,3 +1,56 @@
-h1 {
-    text-align: center;
-  }
+.navbar-toggler {
+  border-color: #FF5B00;
+} 
+
+.nav-link{
+  color: #FFFF;
+}
+
+.buscar,.nav-link{
+  background-color: #FF5B00;
+  border-color: #FF5B00;
+  margin:2px;
+  color: #FFFF;
+}
+.buscar:hover{
+  background-color: #FF5B00;
+  border-color: #FF5B00;
+  color: blue;
+}
+
+.carousel-inner .carousel-item img { 
+  height: 500px; 
+}
+
+.carousel-item:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.recetas {
+  margin: 4% 0;
+  text-align: center;
+}
+
+.listaRecetas{
+  text-align: center;
+}
+
+.imgReceta{
+  display: inline-block;
+  margin: 1%;
+}
+
+.imgReceta button{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.footer .navbar .container-fluid p{
+  margin: 0.5% auto;
+}
