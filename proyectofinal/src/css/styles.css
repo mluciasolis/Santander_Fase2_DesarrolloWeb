@@ -1,3 +1,9 @@
 h1 {
     text-align: center;
   }
+
+.btn-primary{
+  background-color: #F24726 !important;
+  border-color: #F24726 !important;
+  color: white !important;
+}
