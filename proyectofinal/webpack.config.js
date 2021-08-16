@@ -2,15 +2,24 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    index: './src/js/index.js',
+    busqueda: './src/js/busqueda.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.html'
+      template: './src/index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'busqueda.html',
+      template: './src/html/busqueda.html',
+      chunks: ['busqueda']
     })
   ],
   module: {
@@ -28,7 +37,14 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
-        use: ["file-loader"]
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[contenthash].[ext]',
+            },
+          },
+        ],
       },
     ]
   },
