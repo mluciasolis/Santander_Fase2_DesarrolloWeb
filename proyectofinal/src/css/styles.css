@@ -1,3 +1,38 @@
+.navbar,.footer{
+  background-color: #adb5bd;
+}
+
+.botonesNav{
+  display: block;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1%;
+}
+.buscador{
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin: 1% 0;
+}
+
+/* .logo img{
+  width: 100%;
+} */
+/* .logoMenu{
+  display: block;
+} */
+/* .logoMenu button{
+  text-align: end;
+} */
+
+
+
+
 .navbar-toggler {
   border-color: #FF5B00;
 } 
@@ -18,8 +53,12 @@
   color: blue;
 }
 
+.carousel{
+  margin: 14% 1% 0 1%;
+}
+
 .carousel-inner .carousel-item img { 
-  height: 500px; 
+  height: 300px; 
 }
 
 .carousel-item:before {
@@ -33,8 +72,12 @@
 }
 
 .recetas {
-  margin: 4% 0;
+  margin: 3% 0;
   text-align: center;
+}
+
+.tituloRecetas h1{
+  display: inline-block;
 }
 
 .listaRecetas{
@@ -53,4 +96,33 @@
 
 .footer .navbar .container-fluid p{
   margin: 0.5% auto;
+}
+
+.espacio{
+  height: 150px;
+}
+
+@media (max-width: 992px) {
+  .buscador, .barraNav{
+    width: 100%;
+    margin: 1%;
+  }
+
+  .logo, .navbar-toggler{
+    display: inline-block;
+    width: auto;
+  }
+  .logoMenu{
+    display: flex;
+    justify-content: space-between;
+  }
+  .espacio{
+  height: 120px;
+}
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg, .botonesNav, .navbar-collapse{
+    display: inline-block;
+  }
 }
