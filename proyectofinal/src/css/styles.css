@@ -25,7 +25,26 @@ h1 {
   }
   }
 
+  
+.logo-nav-recetall
+{
+  width: 10%;
+}  
+
+.noft
+{
+ position: absolute;
+}
+
+.navbarzai{
+  background-color: #ffffff !important;
+}
   /*Termina CSS De Zai*/
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> zaire_proyectofinal
 .navbar,.footer{
   background-color: #adb5bd;
 }
