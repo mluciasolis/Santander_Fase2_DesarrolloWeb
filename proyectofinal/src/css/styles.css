@@ -3,6 +3,8 @@ h1 {
   }
 
   /*CSS De Zai*/
+
+
   .bckgn-ingredientes
 {
     background:  #f6f6f6;
@@ -41,7 +43,13 @@ h1 {
 }
   /*Termina CSS De Zai*/
 
-  
+.justificado
+{
+  text-align: justify;
+}
+
+
+
 .navbar,.footer{
   background-color: #adb5bd;
 }

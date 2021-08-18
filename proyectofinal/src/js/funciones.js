@@ -126,12 +126,7 @@ function getRecetasBuscador (recetas,url){
     return recetas
 }
 
-function getReceta(recetas,url){
-    getImagesFromMeal(url)
-        .then(function (data) {
-            console.log(data);
-        })
-    return recetas
-}
 
-export {getRecetasAleatorias,getImagesFromMeal,buscar,getRecetasBuscador,getLogo,getReceta};
+
+
+export {getRecetasAleatorias,getImagesFromMeal,buscar,getRecetasBuscador,getLogo};
