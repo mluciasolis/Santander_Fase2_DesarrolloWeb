@@ -2,7 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import '../css/styles.css';
-import logo from '../imgs/logo2.png';
+//import logo from '../imgs/logo2.png';
 
 function getLogo(divLogo){
     // <div class="logo">
@@ -33,16 +33,18 @@ function getRecetasAleatorias (recetas,url){
                 data = data.meals;
     
                 data.forEach(function (data) {
-                    const {strMeal} = data;
+                    const {idMeal,strMeal} = data;
                     const div = document.createElement('div');
-                    const button = document.createElement('button');
+                    const button = document.createElement('a');
                     const img = document.createElement('img');
                     const divName = document.createElement('div');
                     const name = document.createElement('p');
     
                     div.className ="card imgReceta";
                     div.style=`width:20rem;`;
-    
+
+                    button.href = `receta.html?i=${idMeal}&nombre=${encodeURIComponent(strMeal)}`;
+
                     img.src = data.strMealThumb;
                     img.alt = data.caption;
                     img.className = "card-img-top";
@@ -58,8 +60,7 @@ function getRecetasAleatorias (recetas,url){
                     div.appendChild(button);
                     recetas.appendChild(div);
                 })
-            }
-        )
+            })
     }
     return recetas
 }
@@ -81,36 +82,56 @@ function getRecetasBuscador (recetas,url){
             .then(function (data) {
                 //console.log(data);
                 data = data.meals;
-    
-                data.forEach(function (data) {
-                    const {strMeal} = data;
+
+                if(data != null){
+                    data.forEach(function (data) {
+                        const {idMeal,strMeal} = data;
+                        const div = document.createElement('div');
+                        const button = document.createElement('a');
+                        const img = document.createElement('img');
+                        const divName = document.createElement('div');
+                        const name = document.createElement('p');
+        
+                        div.className ="card imgReceta";
+                        div.style=`width:20rem;`;
+
+                        button.href = `receta.html?i=${idMeal}&nombre=${encodeURIComponent(strMeal)}`;
+        
+                        img.src = data.strMealThumb;
+                        img.alt = data.caption;
+                        img.className = "card-img-top";
+        
+                        divName.className = "card-body";
+        
+                        name.className = "card-text";
+        
+                        name.appendChild(document.createTextNode(strMeal));
+                        divName.appendChild(name);
+                        button.appendChild(divName);
+                        button.insertBefore(img,divName);
+                        div.appendChild(button);
+                        recetas.appendChild(div);
+                    })
+                }else{
                     const div = document.createElement('div');
-                    const button = document.createElement('button');
-                    const img = document.createElement('img');
-                    const divName = document.createElement('div');
-                    const name = document.createElement('p');
-    
-                    div.className ="card imgReceta";
-                    div.style=`width:20rem;`;
-    
-                    img.src = data.strMealThumb;
-                    img.alt = data.caption;
-                    img.className = "card-img-top";
-    
-                    divName.className = "card-body";
-    
-                    name.className = "card-text";
-    
-                    name.appendChild(document.createTextNode(strMeal));
-                    divName.appendChild(name);
-                    button.appendChild(divName);
-                    button.insertBefore(img,divName);
-                    div.appendChild(button);
+
+                    div.className = "alert alert-danger";
+                    div.role = "alert";
+
+                    div.appendChild(document.createTextNode('No se encontraron resultados de tu búsqueda ☹. ¡Intenta otra opción!'));
                     recetas.appendChild(div);
-                })
+                }
             }
         )
     return recetas
 }
 
-export {getRecetasAleatorias,getImagesFromMeal,buscar,getRecetasBuscador,getLogo};
+function getReceta(recetas,url){
+    getImagesFromMeal(url)
+        .then(function (data) {
+            console.log(data);
+        })
+    return recetas
+}
+
+export {getRecetasAleatorias,getImagesFromMeal,buscar,getRecetasBuscador,getLogo,getReceta};
