@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     busqueda: './src/js/busqueda.js',
+    receta: './src/js/receta.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,6 +21,11 @@ module.exports = {
       filename: 'busqueda.html',
       template: './src/html/busqueda.html',
       chunks: ['busqueda']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'receta.html',
+      template: './src/html/receta.html',
+      chunks: ['receta']
     })
   ],
   module: {
