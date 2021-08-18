@@ -5,7 +5,7 @@ import '../css/styles.css';
 import { getRecetasAleatorias,buscar,getLogo } from './funciones.js';
 
 let URLactual = window.location.pathname;
-console.log(URLactual);
+//console.log(URLactual);
 
 const carousel = document.querySelector('.carousel');
 const sectionRecetas = document.querySelector('.recetas');
