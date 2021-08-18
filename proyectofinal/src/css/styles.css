@@ -26,3 +26,131 @@ h1 {
   }
 
   /*Termina CSS De Zai*/
+.navbar,.footer{
+  background-color: #adb5bd;
+}
+
+.botonesNav{
+  display: block;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1%;
+}
+.buscador{
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin: 1% 0;
+}
+
+/* .logo img{
+  width: 100%;
+} */
+/* .logoMenu{
+  display: block;
+} */
+/* .logoMenu button{
+  text-align: end;
+} */
+
+
+
+
+.navbar-toggler {
+  border-color: #FF5B00;
+} 
+
+.nav-link{
+  color: #FFFF;
+}
+
+.buscar,.nav-link{
+  background-color: #FF5B00;
+  border-color: #FF5B00;
+  margin:2px;
+  color: #FFFF;
+}
+.buscar:hover{
+  background-color: #FF5B00;
+  border-color: #FF5B00;
+  color: blue;
+}
+
+.carousel{
+  margin: 14% 1% 0 1%;
+}
+
+.carousel-inner .carousel-item img { 
+  height: 300px; 
+}
+
+.carousel-item:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.recetas {
+  margin: 3% 0;
+  text-align: center;
+}
+
+.tituloRecetas h1{
+  display: inline-block;
+}
+
+.listaRecetas{
+  text-align: center;
+}
+
+.imgReceta{
+  display: inline-block;
+  margin: 1%;
+}
+
+.imgReceta a{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.footer .navbar .container-fluid p{
+  margin: 0.5% auto;
+}
+
+.espacio{
+  height: 150px;
+}
+
+@media (max-width: 992px) {
+  .buscador, .barraNav{
+    width: 100%;
+    margin: 1%;
+  }
+
+  .logo, .navbar-toggler{
+    display: inline-block;
+    width: auto;
+  }
+  .logoMenu{
+    display: flex;
+    justify-content: space-between;
+  }
+  .espacio{
+  height: 120px;
+}
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg, .botonesNav, .navbar-collapse{
+    display: inline-block;
+  }
+}
