@@ -1,0 +1,38 @@
+  /*CSS De Zai*/
+  .bckgn-ingredientes
+{
+    background:  #f6f6f6;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; 
+}
+
+.bckgn-img-ingredientes
+{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.marg-section
+{
+  margin-top: 13em;
+}
+
+@media (max-width: 600px){
+  .marg-section{
+    margin-top: 8em;
+  }
+  }
+
+  
+.logo-nav-recetall
+{
+  width: 10%;
+}  
+
+.noft
+{
+ position: absolute;
+}
+
+.navbarzai{
+  background-color: #ffffff !important;
+}
+  /*Termina CSS De Zai*/
