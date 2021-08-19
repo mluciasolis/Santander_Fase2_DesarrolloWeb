@@ -16,6 +16,9 @@ El proyecto consiste en el desarrollo de una aplicación cuya función es un bus
 	- [Mockups](#mockups)
 	- [Configuración del proyecto](#configuración-del-proyecto)
 
+- Postwork S12
+	- [Implementación del proyecto](#implementación-del-proyecto)
+
 
 ## Postwork S8
 
@@ -113,3 +116,11 @@ Como parte de la configuración de Bootstrap se incluyó en el archivo index.js 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 ```
+
+## Implementación del proyecto
+
+Como siguiente paso, se llevo a cabo la implementación del proyecto haciendo uso de: HTML, JavaScript, CSS, Bootstrap y Webpack.
+
+La página de inicio se compone de una barra de navegación, la cual tiene un botón que redirige a una receta aleatoria y un buscador de recetas; La página también cuenta con un carrusel  de imágenes y un listado de 20 recetas aleatorias desponibles para consultarlas.
+
+

@@ -18,7 +18,9 @@ En este repositorio encontrarán los postworks y proyecto final realizados en la
     - Frequency
 - [Postwork S8](#postwork-s8)
 	- Mockups
-	- Configuración del proyecto
+	- Configuración del proyecto final
+- [Postwork S12](#postwork-s12)
+	- Implementación del proyecto final
 
 ## Postwork S4
 Como entregable de este postwork se desarrollaron tres funciones de JavaScript que se explicarán a continuación:
@@ -105,5 +107,9 @@ Como resultado se obtiene un objeto donde sus propiedades son los caracteres ord
 
 ## Postwork S8
 En este postwork se desarrolló la primer parte del proyecto final, la cual consistió en la creación de mockups y en la configuración del proyecto haciendo uso de Webpack, Babel y webpack Dev Server.
+Para obtener información más detallada [ingrese aquí](./proyectofinal/README.md).
+
+## Postwork S12
+En este postwork se desarrolló la segunda parte del proyecto final, la cual consistió en la implementación de los mockups presentados en el postwork 8, así como también toda la funcionalidad de cada una de las vistas, todo esto a través de JavaScript.
 Para obtener información más detallada [ingrese aquí](./proyectofinal/README.md).
 
