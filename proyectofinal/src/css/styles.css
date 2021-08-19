@@ -1,3 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+  /*CSS De Zai*/
+.tipografia-general
+{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.21em;
+}
+.tituloReceta
+{
+  font-family: 'Raleway';
+}
+
+.tituloInstruc-Ingredient
+{
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+}
+
+.bckgn-instrucciones
+{
+    background:  #f6f6f6;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; 
+}
+.Instruccion1
+{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.3em;
+}
+.bckgn-img-ingredientes
+{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.titulosall-ingredientes
+{
+  font-family: 'Abel', sans-serif;
+  font-size: 1.1em;
+}
+
+.marg-section
+{
+  margin-top: 13em;
+}
+
+@media (max-width: 600px){
+  .marg-section{
+    margin-top: 8em;
+  }
+  }
+    
+.logo-nav-recetall
+{
+  width: 10%;
+}  
+
+.navbarzai{
+  background-color: #ffffff !important;
+}
+.noft
+{
+ position: absolute;
+}
+
+.justificado
+{
+  text-align: justify;
+}
+  /*Termina CSS De Zai*/
+
+
+
 .navbar,.footer{
   background-color: #adb5bd;
 }
