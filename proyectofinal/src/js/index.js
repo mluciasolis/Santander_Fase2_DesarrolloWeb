@@ -2,7 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import '../css/styles.css';
-import { getRecetasAleatorias,buscar,getLogo } from './funciones.js';
+import { getRecetasAleatorias, buscar} from './funciones.js';
 
 let URLactual = window.location.pathname;
 //console.log(URLactual);
@@ -15,7 +15,6 @@ const inputBuscar = document.querySelector('#buscarReceta');
 const divLogo = document.querySelector('.logoMenu');
 
 let urlRecetasAleatorias = 'https://www.themealdb.com/api/json/v1/1/random.php';
-//getLogo(divLogo)
 
 //Muestra las recetas en la página de inicio
 getRecetasAleatorias(recetas, urlRecetasAleatorias)

@@ -2,28 +2,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import '../css/styles.css';
-//import logo from '../imgs/logo2.png';
-
-function getLogo(divLogo){
-    // <div class="logo">
-    //     <a class="navbar-brand" href="#">
-    //         <img src="logo.png" alt="logo">
-    //     </a>
-    // </div>
-    const div = document.createElement('div');
-    const a = document.createElement('a');
-    const img = document.createElement('img');
-
-    div.className ="logo";
-    a.className = "navbar-brand";
-    img.src = logo;
-    img.alt = "logo";
-
-    a.appendChild(img);
-    div.appendChild(a);
-    //divLogo.appendChild(div);
-    divLogo.insertBefore(div,divLogo.firstChild);
-}
 
 function getRecetasAleatorias (recetas,url){
     for (let i = 0; i < 20; i++) {
@@ -73,7 +51,6 @@ function getImagesFromMeal(urlApi) {
 }
 
 function buscar(busqueda){
-    //let busqueda = document.querySelector('buscarReceta').value;
     document.location.href = `busqueda.html?i=` + busqueda;
 }
 
@@ -134,4 +111,4 @@ function getReceta(recetas,url){
     return recetas
 }
 
-export {getRecetasAleatorias,getImagesFromMeal,buscar,getRecetasBuscador,getLogo,getReceta};
+export {getRecetasAleatorias,getImagesFromMeal,buscar,getRecetasBuscador,getReceta};

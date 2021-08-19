@@ -5,8 +5,6 @@ import '../css/styles.css';
 import { getRecetasBuscador } from './funciones.js';
 import { buscar } from './funciones.js';
 
-const carousel = document.querySelector('.carousel');
-const sectionRecetas = document.querySelector('.recetas');
 const recetas = document.querySelector('.listaRecetas');
 const botonBuscar = document.querySelector('.buscar');
 const inputBuscar = document.querySelector('.inputBuscar');
