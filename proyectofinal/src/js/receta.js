@@ -5,14 +5,8 @@ import '../css/styles.css';
 import {getImagesFromMeal} from './funciones.js';
 import { buscar } from './funciones.js';
 
-// const carousel = document.querySelector('.carousel');
-// const sectionRecetas = document.querySelector('.recetas');
-const recetas = document.querySelector('.listaRecetas');
 const botonBuscar = document.querySelector('.buscar');
 const inputBuscar = document.querySelector('.inputBuscar');
-
-
-//const receta = document.querySelector("#")
 
 let urlRecetaBusqueda = "";
 
@@ -32,47 +26,44 @@ urlRecetaBusqueda = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=` + bu
 const pre_url = `https://www.themealdb.com/images/ingredients/`
 
 //Para rellenar los html a travéss de querySelector
-const imgreceta = document.querySelector('.imgrecetita')
-const img_ing1 = document.querySelector('.img1-ingrediente')
-const img_ing2 = document.querySelector('.img2-ingrediente')
-const img_ing3 = document.querySelector('.img3-ingrediente')
-const img_ing4 = document.querySelector('.img4-ingrediente')
+const imgreceta = document.querySelector('.imgrecetita');
+const listaIngredientes = document.querySelector('.listaIngredientes');
 
-let img_ingrediente1 = "";
-let img_ingrediente2 = "";
-let img_ingrediente3 = "";
-let img_ingrediente4 = "";
-
-///Muestra las recetas en la página de búsqueda
-//getRecetasBuscador(recetas, urlRecetasBusqueda)
-/*getReceta(recetas,urlRecetaBusqueda)*/
-
-
+//Obtiene de la API el objeto correspondiente a la receta y asigna cada propiedad al nodo del DOM correspondiente
 getImagesFromMeal(urlRecetaBusqueda)
         .then((data) => {
             data = data.meals[0]
             imgreceta.src = data.strMealThumb;
             document.querySelector(".Instruccion1").innerHTML = ` <svg class="bi bi-check-circle-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F24726" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-          </svg> ${data.strInstructions}`;    
-                   
+            </svg> ${data.strInstructions}`;    
 
-            img_ing1.src =  pre_url + `${data.strIngredient1}.png`;      
-            img_ing2.src = pre_url + `${data.strIngredient2}.png`;
-            img_ing3.src = pre_url + `${data.strIngredient3}.png`;
-            img_ing4.src = pre_url + `${data.strIngredient4}.png`;
+            for (const prop in data) {
+                if (prop.startsWith('strIngredient') && data[prop] != "") {
+                const div = document.createElement('div');
+                const divImg = document.createElement('div');
+                const img = document.createElement('img');
+                const i = document.createElement('i');
+                const hr = document.createElement('hr');
+                const span = document.createElement('span');
 
-            document.querySelector(".Ingrediente1").innerHTML = `${data.strIngredient1}`;
-            document.querySelector(".Ingrediente2").innerHTML = `${data.strIngredient2}`;
-            document.querySelector(".Ingrediente3").innerHTML = `${data.strIngredient3}`;
-            document.querySelector(".Ingrediente4").innerHTML = `${data.strIngredient4}`;
+                div.className = "col-3";
+                divImg.className = "col-md-4 col-lg-8 text-lg-center";
+                img.className = "img-fluid mb-5 mb-md-0 bckgn-img-ingredientes img1-ingrediente"
+                img.src = pre_url + `${data[prop]}.png`;
+                img.alt = data[prop];
+                i.className = "titulosall-ingredientes";
+                i.appendChild(document.createTextNode(data[prop]));
+                span.className = "titulosall-ingredientes";
 
-            document.querySelector(".medidas-ingrediente1").innerHTML = `${data.strMeasure1}`;
-            document.querySelector(".medidas-ingrediente2").innerHTML = `${data.strMeasure2}`;
-            document.querySelector(".medidas-ingrediente3").innerHTML = `${data.strMeasure3}`;
-            document.querySelector(".medidas-ingrediente4").innerHTML = `${data.strMeasure4}`;
-
-            console.log(data)
+                div.appendChild(divImg);
+                divImg.appendChild(img);
+                divImg.appendChild(i);
+                divImg.appendChild(hr);
+                divImg.appendChild(span);
+                listaIngredientes.appendChild(div);
+                }
+            }
         })
 
 botonBuscar.addEventListener("click", (e) => {
