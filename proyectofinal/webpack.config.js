@@ -6,6 +6,7 @@ module.exports = {
     index: './src/js/index.js',
     busqueda: './src/js/busqueda.js',
     receta: './src/js/receta.js',
+    recetaAleatoria: './src/js/recetaAleatoria.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -26,6 +27,11 @@ module.exports = {
       filename: 'receta.html',
       template: './src/html/receta.html',
       chunks: ['receta']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'recetaAleatoria.html',
+      template: './src/html/recetaAleatoria.html',
+      chunks: ['recetaAleatoria']
     })
   ],
   module: {
